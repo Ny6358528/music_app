@@ -28,7 +28,7 @@ class CustomTextFieldHomePage extends StatelessWidget {
           filled: true,
           fillColor: ColorsManagers.textfiledColor,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(RaduisManagers.r50),
+            borderRadius: BorderRadius.circular(50),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(RaduisManagers.r50),
