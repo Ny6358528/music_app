@@ -23,12 +23,12 @@ class CustomTextFieldHomePage extends StatelessWidget {
         decoration: InputDecoration(
           contentPadding: EdgeInsets.all(PaddingManagers.p10),
           prefixIcon: const Icon(Icons.search, color: ColorsManagers.whiteColor),
-          hintText: StringManagers.search_Song,
+          hintText: StringManagers.searchSong,
           hintStyle: const TextStyle(color: ColorsManagers.whiteColor, fontSize: FontSize.f12),
           filled: true,
           fillColor: ColorsManagers.textfiledColor,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(50),
+            borderRadius: BorderRadius.circular(RaduisManagers.r50),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(RaduisManagers.r50),
