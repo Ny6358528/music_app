@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/resources/colors_managers.dart';
+import '../../../core/resources/font_managers.dart';
 import '../../../core/resources/padding_managers.dart';
 import '../../../core/resources/radius_managers.dart';
 import '../../../core/resources/string_managers.dart';
@@ -23,7 +24,7 @@ class CustomTextFieldHomePage extends StatelessWidget {
           contentPadding: EdgeInsets.all(PaddingManagers.p10),
           prefixIcon: const Icon(Icons.search, color: ColorsManagers.whiteColor),
           hintText: StringManagers.search_Song,
-          hintStyle: const TextStyle(color: ColorsManagers.whiteColor, fontSize: 12),
+          hintStyle: const TextStyle(color: ColorsManagers.whiteColor, fontSize: FontSize.f12),
           filled: true,
           fillColor: ColorsManagers.textfiledColor,
           border: OutlineInputBorder(
