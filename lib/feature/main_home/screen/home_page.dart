@@ -1,14 +1,16 @@
 
 
-import 'package:flutter/cupertino.dart' show BuildContext, CupertinoIcons;
+
 import 'package:flutter/material.dart';
 import 'package:music/core/resources/padding_managers.dart';
+import 'package:music/models/songsModels.dart';
 
+import '../../../controller/home_screen_controller.dart';
 import '../../../core/resources/alignment_managers.dart';
+
 import '../../../core/resources/asset_managers.dart';
 import '../../../core/resources/colors_managers.dart';
 
-import '../../../core/resources/font_managers.dart';
 import '../../../core/resources/height_managers.dart';
 
 
@@ -43,8 +45,10 @@ class HomePage extends StatelessWidget {
               CustomTopTitleHomeScreen(),
               SizedBox(height: HeightManagers.h22),
               CustomTopImageHomePage(
-                musicName: 'musicName',
-                singerName: 'singerName',
+                onTap: (){
+                  HomePageController.navHomePageToPlayMusicPage(context: context);
+                },
+              songsModels:SongsModels(image: AssetManagers.homepageimage, singer: "singer", song: "song", pathSong: "pathSong")
               ),
           CustomCenterTitle(
             title: 'Recommanded music',

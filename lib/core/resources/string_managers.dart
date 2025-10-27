@@ -7,4 +7,5 @@ class StringManagers{
   static const String recentlyPlayed='Recently Played';
   static const String musicName="Music Name";
   static const String singerName="Singer Name";
+  static const String nowplaying="Now playing";
 }
