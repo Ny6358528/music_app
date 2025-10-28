@@ -15,7 +15,7 @@ class ColorsManagers{
 
 
   static const Color textfiledColor=Color(0xffB1AFE9);
-
+  static const Color blue3Color=Color(0xff2F5D9A);
 
 
 }

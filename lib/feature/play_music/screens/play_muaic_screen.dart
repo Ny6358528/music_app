@@ -35,7 +35,12 @@ class PlayMusicScreen extends StatelessWidget {
             CustomImagePlayMusicScreen(),
 
             SizedBox(height: HeightManagers.h30,),
-            CustomButtomControllerPlayMusicScreen()
+            CustomButtomControllerPlayMusicScreen(
+              value: 0.5,
+              onChanged: (value){
+
+              },
+            )
 
 
 
