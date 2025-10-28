@@ -3,6 +3,8 @@ class WidthMangers{
   static const double w1=1;
   static const double w171=171;
   static const double w17=17;
+  static const double w13=13;
   static const double w21=21;
+  static const double w55=55;
   static const double w248=248;
 }

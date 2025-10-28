@@ -67,16 +67,37 @@ class CustomButtomControllerPlayMusicScreen extends StatelessWidget {
 
           ],
         ),
-        SliderTheme(
-          data: SliderThemeData(
-            thumbShape: RoundSliderThumbShape()
-          ),
-          child: Slider(value: value, onChanged: onChanged,
-          activeColor: ColorsManagers.textfiledColor,
-            inactiveColor: ColorsManagers.blue3Color,
+        Padding(
+          padding:  EdgeInsets.symmetric(horizontal: 26,vertical: 7),
+          child: SliderTheme(
+            data: SliderThemeData(
+              thumbShape: RoundSliderThumbShape(),
+              overlayShape: SliderComponentShape.noOverlay,
+            ),
+            child: Slider(value: value, onChanged: onChanged,
+            activeColor: ColorsManagers.primaryColor,
+              inactiveColor: ColorsManagers.blue3Color,
 
+            ),
+          ),
+        ),
+        Padding(
+          padding:  EdgeInsets.symmetric(horizontal: 26,vertical: 7),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+Text('2:02',style: TextStyle(
+  color: ColorsManagers.whiteColor,
+
+),),
+              Text('2:02',style: TextStyle(
+                color: ColorsManagers.whiteColor,
+
+              ),),
+            ],
           ),
         )
+
       ],
     );
   }

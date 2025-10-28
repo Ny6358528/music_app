@@ -1,5 +1,6 @@
 class PaddingManagers{
-
+  static const double p8=8;
+  static const double p20=20;
   static const double p10=10;
   static const double p70=70;
   static const double pleft33=33;
