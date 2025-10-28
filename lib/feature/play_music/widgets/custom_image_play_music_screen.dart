@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:music/core/resources/height_managers.dart';
+import 'package:music/core/resources/width_mangers.dart';
 
 import '../../../core/resources/colors_managers.dart';
 import '../../../core/resources/font_managers.dart';
@@ -16,10 +18,10 @@ class CustomImagePlayMusicScreen extends StatelessWidget {
         Image(
           image: AssetImage("assets/images/imageplaymusicpage.png"),
           fit: BoxFit.cover,
-          height: 261,
-          width: 248,
+          height: HeightManagers.h261,
+          width: WidthMangers.w248,
         ),
-        SizedBox(height: 23),
+        SizedBox(height: HeightManagers.h23),
 
 
 

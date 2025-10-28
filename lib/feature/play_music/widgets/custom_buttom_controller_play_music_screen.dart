@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:music/core/resources/font_managers.dart';
+import 'package:music/core/resources/radius_managers.dart';
 
+import '../../../core/resources/alignment_managers.dart';
 import '../../../core/resources/colors_managers.dart';
 
 class CustomButtomControllerPlayMusicScreen extends StatelessWidget {
@@ -16,11 +19,11 @@ class CustomButtomControllerPlayMusicScreen extends StatelessWidget {
         Icon(Icons.shuffle,color: ColorsManagers.whiteColor,size: 40,),
         Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20)
+                borderRadius: BorderRadius.circular(RaduisManagers.r20)
 
                 ,gradient: LinearGradient(
-                begin: Alignment(0.0, -1),
-                end: Alignment(0.0, 1),
+                begin: Alignment(AlignmentManagers.x0, AlignmentManagers.y_1),
+                end: Alignment(AlignmentManagers.x0, AlignmentManagers.y1),
 
                 colors: [
 
@@ -35,14 +38,15 @@ class CustomButtomControllerPlayMusicScreen extends StatelessWidget {
         CircleAvatar(
             radius: 40,
             backgroundColor: ColorsManagers.textfiledColor,
-            child: Icon(Icons.pause,color: ColorsManagers.whiteColor,size: 40,)),
+            child: Icon(Icons.pause,color: ColorsManagers.whiteColor,size: FontSize.f40,)),
         Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20)
+              borderRadius: BorderRadius.circular(RaduisManagers.r20)
 
               ,gradient: LinearGradient(
-              begin: Alignment(0.0, -1),
-              end: Alignment(0.0, 1),
+              begin: Alignment(AlignmentManagers.x0, AlignmentManagers.y_1),
+              end: Alignment(AlignmentManagers.x0, AlignmentManagers.y1),
+
               colors: [
             ColorsManagers.selectedIconColor,
             ColorsManagers.textfiledColor
@@ -51,8 +55,8 @@ class CustomButtomControllerPlayMusicScreen extends StatelessWidget {
           ])
           ),
 
-          child: Icon(Icons.skip_next,color: ColorsManagers.whiteColor,size: 40,),),
-        Icon(Icons.repeat,color: ColorsManagers.whiteColor,size: 40,),
+          child: Icon(Icons.skip_next,color: ColorsManagers.whiteColor,size: FontSize.f40),),
+        Icon(Icons.repeat,color: ColorsManagers.whiteColor,size: FontSize.f40,),
 
 
 

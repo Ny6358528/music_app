@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music/core/resources/height_managers.dart';
 
 
 import '../../../core/resources/alignment_managers.dart';
@@ -30,10 +31,10 @@ class PlayMusicScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
-            SizedBox(height: 150,),
+            SizedBox(height: HeightManagers.h150,),
             CustomImagePlayMusicScreen(),
 
-            SizedBox(height: 30,),
+            SizedBox(height: HeightManagers.h30,),
             CustomButtomControllerPlayMusicScreen()
 
 

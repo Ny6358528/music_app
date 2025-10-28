@@ -10,6 +10,6 @@ class FontSize{
 
   static const double f16=16;
   static const double f18=18;
-
+  static const double f40=40;
   static const double f50=50;
 }
