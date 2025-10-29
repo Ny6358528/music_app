@@ -9,9 +9,9 @@ import '../../../core/resources/width_mangers.dart';
 
 class CustomAppBarPlayMusicScreen extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBarPlayMusicScreen({
-    super.key,
+    super.key, required this.onPressed,
   });
-
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -30,7 +30,7 @@ class CustomAppBarPlayMusicScreen extends StatelessWidget implements PreferredSi
       ),
       centerTitle: true,
       backgroundColor: Colors.transparent,
-      leading: Icon(Icons.arrow_back_ios_rounded,color: ColorsManagers.whiteColor,size: RaduisManagers.r30,),
+      leading:IconButton(onPressed:onPressed , icon: Icon(Icons.arrow_back_ios_rounded,color: ColorsManagers.whiteColor,size: RaduisManagers.r30,),)
     );
   }
 

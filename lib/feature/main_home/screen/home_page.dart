@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:music/core/resources/padding_managers.dart';
-import 'package:music/models/songsModels.dart';
+import 'package:music/models/quranModels.dart';
 
 import '../../../controller/home_screen_controller.dart';
 import '../../../core/resources/alignment_managers.dart';
@@ -11,11 +11,13 @@ import '../../../core/resources/alignment_managers.dart';
 import '../../../core/resources/asset_managers.dart';
 import '../../../core/resources/colors_managers.dart';
 
+import '../../../core/resources/constant_value.dart';
 import '../../../core/resources/height_managers.dart';
 
 
 import '../widget/custom_center_title.dart';
 import '../widget/custom_recommanded_music.dart';
+import '../widget/custom_recommed_music_home.dart';
 import '../widget/custom_text_field_home_page.dart';
 import '../widget/custom_top_image_home_page.dart';
 import '../widget/custom_top_title_home_screen.dart';
@@ -45,31 +47,20 @@ class HomePage extends StatelessWidget {
               CustomTopTitleHomeScreen(),
               SizedBox(height: HeightManagers.h22),
               CustomTopImageHomePage(
-                onTap: (){
-                  HomePageController.navHomePageToPlayMusicPage(context: context);
+                onTap: (index){
+                  HomePageController.navHomePageToPlayMusicPage(context: context,index: index);
                 },
-              songsModels:SongsModels(image: AssetManagers.homepageimage, singer: "singer", song: "song", pathSong: "pathSong")
-              ),
-          CustomCenterTitle(
+                  quranModels:ConstantValue.list
+              ) , CustomCenterTitle(
             title: 'Recommanded music',
           ),
           SizedBox(height: HeightManagers.h22,),
 
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: PaddingManagers.p10),
-                child: ListView.separated(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  separatorBuilder: (context,index){
-                    return SizedBox(height: 10,);
-                  },
-                  itemBuilder: (context,index){
-                        return      CustomRecommandedMusic(
-                    title: "kkkkk",
-                    subTitle: "nnnnnn",
-                  );},
-                  itemCount: 10,
-                ),
+              CustomRecommedMusicHome(
+                  QuranMode:ConstantValue.list,
+                onTap: (index){
+                  HomePageController.navHomePageToPlayMusicPage(context: context,index: index);
+                },
               )
 
            ],
@@ -79,4 +70,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

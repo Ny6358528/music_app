@@ -7,14 +7,14 @@ import 'package:music/core/resources/width_mangers.dart';
 import '../../../core/resources/colors_managers.dart';
 import '../../../core/resources/font_managers.dart';
 import '../../../core/resources/radius_managers.dart';
-import '../../../models/songsModels.dart';
+import '../../../models/quranModels.dart';
 
 class CustomTopImageHomePage extends StatelessWidget {
-  const CustomTopImageHomePage({
-    super.key, required this.songsModels,required this.onTap,
+  const CustomTopImageHomePage( {
+    super.key, required this.quranModels,required this.onTap,
   });
-final  SongsModels songsModels;
-  final GestureTapCallback? onTap;
+final  List<QuranModels> quranModels;
+  final Function(int index) onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +28,9 @@ final  SongsModels songsModels;
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return GestureDetector(
-                  onTap: onTap,
+                  onTap: (){
+                    onTap(index);
+                  },
 
                   child: Column(
                     children: [
@@ -37,15 +39,15 @@ final  SongsModels songsModels;
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(RaduisManagers.r10),
                             child: Image(
-                              image: AssetImage(songsModels.image),
-                              fit: BoxFit.cover,
+                              image: AssetImage(quranModels[index].image),
+                              fit: BoxFit.cover,height: 160,width: 160,
                             ),
                           ),
                         ),
 
 
                       Text(
-                        songsModels.song,
+                        quranModels[index].Quran,
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: FontSize.f15,
@@ -53,7 +55,7 @@ final  SongsModels songsModels;
                         ),
                       ),
                       Text(
-                        songsModels.singer,
+                        quranModels[index].reading,
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: FontSize.f12,
